@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +23,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -30,9 +32,16 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add option="-std=gnu++14" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/BusDevice.h" />
+		<Unit filename="include/Cpu.h" />
+		<Unit filename="include/OpcodeTranslation.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/BusDevice.cpp" />
+		<Unit filename="src/Cpu.cpp" />
+		<Unit filename="src/OpcodeTranslation.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

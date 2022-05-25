@@ -1,6 +1,6 @@
 #include "Cpu.h"
 
-namespace Cpu {
+namespace cpu {
     Cpu::Cpu()
     {
         //ctor

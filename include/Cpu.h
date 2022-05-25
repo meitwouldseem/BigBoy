@@ -2,7 +2,7 @@
 #define CPU_H
 #include <cstdint>
 
-namespace Cpu {
+namespace cpu {
     struct CpuState
     {
         uint8_t A;//accumulator
@@ -16,16 +16,21 @@ namespace Cpu {
         uint16_t SP;//stack pointer
         uint16_t PC;//program counter
         //Flags
-        bool z = false;//zero
-        bool n = false;//subtract
-        bool h = false;//half carry (Ignore)
-        bool c = false;//carry
+        bool z;//zero
+        bool n;//subtract
+        bool h;//half carry (Ignore)
+        bool c;//carry
     };
 
     class Cpu
     {
         public:
             Cpu();
+
+        private:
+            void TranslateOpcode();
+
+            CpuState s;
     };
 }
 
