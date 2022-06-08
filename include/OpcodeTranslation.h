@@ -1,11 +1,8 @@
 #ifndef OPCODETRANSLATION_H
 #define OPCODETRANSLATION_H
 
-namespace cpu {
-    struct InstructionDefinition
-    {
-        void (Cpu::*ptr)();
-    };
-}
+class Cpu;
+
+typedef int (Cpu::*InstrPtr)();
 
 #endif // OPCODETRANSLATION_H
